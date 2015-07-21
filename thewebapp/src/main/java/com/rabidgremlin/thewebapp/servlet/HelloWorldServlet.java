@@ -19,6 +19,7 @@ public class HelloWorldServlet extends HttpServlet
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException
     {
-        resp.getWriter().append("Hello World ! You random token is: " + tokenUtil.getRandomToken());
+        resp.getWriter().append("Hello World ! Your random token is: " + tokenUtil.getRandomToken())
+        .append("<br>Test property is: ").append(System.getProperty("testProp"));
     }
 }

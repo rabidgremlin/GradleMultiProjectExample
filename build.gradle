@@ -1,0 +1,8 @@
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+gretty{
+ // example of injecting system property into container launched by gretty. Could be used to config environment for apps to use
+ if(!System.properties.testProp) throw new Exception ("systemProp.testProp must be set in gradle.properties")
+ println "***** testprop is set to: " + System.properties.testProp
+ jvmArgs = ['-DtestProp=' + System.properties.testProp]
+}
