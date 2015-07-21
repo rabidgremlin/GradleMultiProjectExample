@@ -1,0 +1,12 @@
+apply plugin: 'java'
+//apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp' // see http://stackoverflow.com/questions/12493763/eclipse-dependent-projects-not-copied-to-wtp-deployment
+
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'commons-codec:commons-codec:1.10'
+}
