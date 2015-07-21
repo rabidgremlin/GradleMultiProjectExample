@@ -24,3 +24,4 @@ systemProp.testProp=My Test Prop
 
 ## issues
 * ```eclipse``` task creates appropriate Eclipse projects which compile BUT deployed dynamic web app does not work as compiled code from utillib project is not correctly copied to WEB-INF folder
+* Hot deploy does not work for dependent projects eg changes to ```utillib``` don't hot deploy. Requires restart (eg stop and restart ```gradlew farmRun```)
